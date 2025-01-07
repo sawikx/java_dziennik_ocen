@@ -17,51 +17,51 @@ insert into role (name)
 values ("ROLE_ADMIN");
 
 -- Dodanie administratora
-INSERT INTO user (email, password) VALUES ("admin@gmail.com", "admin");
+INSERT INTO user (email, password) VALUES ("admin@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_ADMIN"));
 -- Tworzenie użytkownika i przypisanie do nauczyciela
-INSERT INTO user (email, password) VALUES ("annanowak@gmail.com", "password1");
+INSERT INTO user (email, password) VALUES ("annanowak@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_NAUCZYCIEL"));
 INSERT INTO nauczyciele (imie, nazwisko, user_id) VALUES ('Anna', 'Nowak', LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("jankowalski@gmail.com", "password2");
+INSERT INTO user (email, password) VALUES ("jankowalski@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_NAUCZYCIEL"));
 INSERT INTO nauczyciele (imie, nazwisko, user_id) VALUES ('Jan', 'Kowalski', LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("katarzynawisniewska@gmail.com", "password3");
+INSERT INTO user (email, password) VALUES ("katarzynawisniewska@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_NAUCZYCIEL"));
 INSERT INTO nauczyciele (imie, nazwisko, user_id) VALUES ('Katarzyna', 'Wiśniewska', LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("jaroslawnoga@gmail.com", "password4");
+INSERT INTO user (email, password) VALUES ("jaroslawnoga@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_NAUCZYCIEL"));
 INSERT INTO nauczyciele (imie, nazwisko, user_id) VALUES ('Jarosław', 'Noga', LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("jankomar@gmail.com", "password5");
+INSERT INTO user (email, password) VALUES ("jankomar@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_NAUCZYCIEL"));
 INSERT INTO nauczyciele (imie, nazwisko, user_id) VALUES ('Jan', 'Komar', LAST_INSERT_ID());
 
 -- Tworzenie użytkownika i przypisanie do ucznia
-INSERT INTO user (email, password) VALUES ("piotrkowalski@gmail.com", "password6");
+INSERT INTO user (email, password) VALUES ("piotrkowalski@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_UCZEN"));
 INSERT INTO uczniowie (imie, nazwisko, id_klasy, user_id) VALUES ('Piotr', 'Kowalski', 1, LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("martanowakowska@gmail.com", "password7");
+INSERT INTO user (email, password) VALUES ("martanowakowska@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_UCZEN"));
 INSERT INTO uczniowie (imie, nazwisko, id_klasy, user_id) VALUES ('Marta', 'Nowakowska', 2, LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("jakubkot@gmail.com", "password8");
+INSERT INTO user (email, password) VALUES ("jakubkot@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_UCZEN"));
 INSERT INTO uczniowie (imie, nazwisko, id_klasy, user_id) VALUES ('Jakub', 'Kot', 1, LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("rakotako@gmail.com", "password9");
+INSERT INTO user (email, password) VALUES ("rakotako@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_UCZEN"));
 INSERT INTO uczniowie (imie, nazwisko, id_klasy, user_id) VALUES ('Rako', 'Tako', 2, LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("torbor@gmail.com", "password10");
+INSERT INTO user (email, password) VALUES ("torbor@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_UCZEN"));
 INSERT INTO uczniowie (imie, nazwisko, id_klasy, user_id) VALUES ('Tor', 'Bor', 3, LAST_INSERT_ID());
 
-INSERT INTO user (email, password) VALUES ("bontgon@gmail.com", "password11");
+INSERT INTO user (email, password) VALUES ("bontgon@gmail.com", "$2y$10$TEqNXNz30HulGYYs.uax3ufepEwI84DjX4fZ9h3vDZ6z31n3pZ0QG");
 INSERT INTO user_role (user_id, role_id) VALUES (LAST_INSERT_ID(), (SELECT id FROM role WHERE name = "ROLE_UCZEN"));
 INSERT INTO uczniowie (imie, nazwisko, id_klasy, user_id) VALUES ('Bont', 'Gon', 3, LAST_INSERT_ID());
 
