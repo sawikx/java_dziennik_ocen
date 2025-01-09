@@ -1,6 +1,5 @@
 package projekt.dziennik_ocen.Controller;
 
-import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,11 +23,7 @@ public class KlasyController {
     }
 
     @GetMapping("/")
-    public String index(HttpSession session, Model model) {
-        String jwtToken = (String) session.getAttribute("token");
-        if (jwtToken == null) {
-            return "redirect:/login";
-        }
+    public String index(Model model) {
         List<Klasy> klasyList = (List<Klasy>) klasyService.listAll();
         Map<Integer, Long> studentCounts = new HashMap<>();
 

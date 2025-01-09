@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface UczniowieRepository extends CrudRepository<Uczniowie, Integer> {
     long countByKlasa_Id(Integer klasa);
     List<Uczniowie> findByKlasaId(Integer klasaId);
+    Optional<Uczniowie> findByLogin(String login);
 }

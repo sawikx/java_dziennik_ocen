@@ -1,6 +1,5 @@
 package projekt.dziennik_ocen.Controller;
 
-import jakarta.servlet.http.HttpSession;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -25,12 +24,8 @@ public class UczniowieController {
         this.klasyService = klasaService;
     }
 
-    @GetMapping("*")
-    public String index(Model model,HttpSession session ) {
-        String jwtToken = (String) session.getAttribute("token");
-        if (jwtToken == null) {
-            return "redirect:/login";
-        }
+    @GetMapping("/")
+    public String index(Model model) {
         model.addAttribute("listUczniowie", uczniowieService.listAll());
         return "uczniowie/index";
     }

@@ -3,9 +3,8 @@ CREATE TABLE uczniowie (
     imie VARCHAR(50) NOT NULL,
     nazwisko VARCHAR(50) NOT NULL,
     id_klasy INT,
-    user_id INT UNIQUE,
-    FOREIGN KEY (id_klasy) REFERENCES klasy(id_klasy),
-    FOREIGN KEY (user_id) REFERENCES user(id)
+    FOREIGN KEY (id_klasy) REFERENCES klasy(id_klasy)
 ) engine=InnoDB;
 
-
+INSERT INTO uczniowie (imie, nazwisko, id_klasy) VALUES ('Piotr', 'Kowalski', 1);
+INSERT INTO uczniowie (imie, nazwisko, id_klasy) VALUES ('Marta', 'Nowakowska', 2);

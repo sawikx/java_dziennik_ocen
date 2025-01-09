@@ -17,10 +17,6 @@ public class Uczniowie {
     @Column(name = "id_ucznia", unique = true, nullable = false)
     private Integer id;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
-    private User user; // Powiązanie z modelem User
-
     @Column(name = "imie", nullable = false, length = 50)
     private String imie;
 
@@ -30,6 +26,17 @@ public class Uczniowie {
     @ManyToOne
     @JoinColumn(name = "id_klasy")
     private Klasy klasa;
+
+    // Klasa Uczniowie
+    @Column(name = "login", nullable = false, unique = true)
+    private String login;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
+    @Column(name = "role", nullable = true)
+    private String role = "STUDENT"; // Domyślna wartość
+
 
     @Override
     public String toString() {

@@ -8,4 +8,5 @@ import java.util.Optional;
 
 public interface NauczycieleRepository extends CrudRepository<Nauczyciele, Integer>{
 
+    Optional<Nauczyciele> findByLogin(String login);
 }

@@ -18,12 +18,7 @@
 <body>
 
     <!-- Navigation -->
-    <div th:with="currentUrl=${currentUrl != null ? currentUrl : ''}">
-        <div th:if="${not currentUrl.contains('/login')}">
-            <nav th:replace="layouts/navigation :: navigation"></nav>
-        </div>
-    </div>
-
+    <nav th:replace="layouts/navigation :: navigation"></nav>
 
     <!-- Page Content -->
     <div class="container">

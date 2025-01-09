@@ -9,3 +9,8 @@ CREATE TABLE oceny (
     FOREIGN KEY (id_przedmiotu) REFERENCES przedmioty(id_przedmiotu),
     FOREIGN KEY (id_nauczyciela) REFERENCES nauczyciele(id_nauczyciela)
 ) engine=InnoDB;
+
+INSERT INTO oceny (id_ucznia, id_przedmiotu, id_nauczyciela, ocena, data_oceny) VALUES
+(1, 1, 1, 5, '2024-12-01');
+INSERT INTO oceny (id_ucznia, id_przedmiotu, id_nauczyciela, ocena, data_oceny) VALUES
+(2, 2, 2, 4, '2024-12-02');

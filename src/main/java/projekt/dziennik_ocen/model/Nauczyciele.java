@@ -17,18 +17,26 @@ public class Nauczyciele {
     @Column(name = "id_nauczyciela", unique = true, nullable = false)
     private Integer id;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
-    private User user; // Powiązanie z modelem User
-
     @Column(name = "imie", nullable = false, length = 50)
     private String imie;
 
     @Column(name = "nazwisko", nullable = false, length = 50)
     private String nazwisko;
 
+    // Klasa Nauczyciele
+    @Column(name = "login", nullable = false, unique = true)
+    private String login;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
+    @Column(name = "role", nullable = true)
+    private String role = "TEACHER"; // Domyślna wartość
+
+
     @Override
     public String toString() {
         return String.format("%s %s", imie, nazwisko);
     }
+
 }
