@@ -24,12 +24,12 @@ public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
     @Value("${auth.jwtSecret}")
-    private String jwtSecret;
+    public String jwtSecret;
 
     @Value("${auth.jwtExpirationMs}")
-    private int jwtExpirationMs;
+    public int jwtExpirationMs;
 
-    private SecretKey getSigningKey() {
+    public SecretKey getSigningKey() {
         byte[] keyBytes = Decoders.BASE64.decode(this.jwtSecret);
         return Keys.hmacShaKeyFor(keyBytes);
     }
